@@ -4,7 +4,13 @@
   <div class="intro container align-items-center justify-content-center">
     <div class="intro-block">
       <h1>A flexible, responsive, touch-friendly palceholder content for Vue.js</h1>
+      <div class="code">
+        <code class="javascript">
+$ npm i monk-placeholder-content -D
+        </code>
+      </div>
       <div class="intro-buttons container align-items-center justify-content-center">
+
         <div class="">
           <router-link class="btn start" :to="{ name: 'Docs' }">GET STARTED</router-link>
         </div>
@@ -16,19 +22,24 @@
   </div>
 
   <div class="example example5">
-    <label for="">Card content</label>
+    <!-- <label for="">Card content</label> -->
     <div class="container wrap">
       <div class="col-12 col-xl-4 col-lg-4 col-md-6 col-sm-12 box" v-for="x in 3">
         <placeholderContent type="card" :photo="true" :title="true" :description="false" :number="1" :button="false"></placeholderContent>
       </div>
     </div>
-    <div class="container">
+    <div class="container justify-content-center">
+      <div class="">
+        <router-link class="btn start" :to="{ name: 'Examples' }">MORE EXAMPLES</router-link>
+      </div>
+    </div>
+    <!-- <div class="container">
 <pre><code class="html" id="foo">
   &lt;placeholderContent type=&quot;card&quot; :photo=&quot;true&quot; :title=&quot;true&quot; :description=&quot;false&quot; :number=&quot;1&quot; :button=&quot;false&quot;&gt;&lt;/placeholderContent&gt;
 
 </code></pre>
 <a class="btn btn-copy" data-clipboard-target="#foo">copy</a>
-    </div>
+    </div> -->
   </div>
 
 
@@ -36,7 +47,7 @@
 </template>
 
 <script>
-import placeholderContent from './placeholder-content'
+import placeholderContent from '../../node_modules/monk-placeholder-content/src/components/placeholder-content.vue'
 
 export default {
   name: 'hello',
@@ -73,6 +84,11 @@ pre, code {
 .intro .intro-block {
   width: 700px;
   max-width: 90%;
+}
+
+.intro .intro-block .code {
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .intro .intro-block h1 {

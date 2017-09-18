@@ -1,5 +1,5 @@
 {
-  "name": "monk-placeholder-content",
+  "name": "monk-placeholder-content-docs",
   "version": "1.0.0",
   "description": "Placeholder content based on Facebook, create with Vue.",
   "author": "Monk <contato@agmonk.com>",
@@ -61,6 +61,7 @@
     "karma-spec-reporter": "0.0.31",
     "karma-webpack": "^2.0.2",
     "mocha": "^3.2.0",
+    "monk-placeholder-content": "^1.0.1",
     "nightwatch": "^0.9.12",
     "node-sass": "^4.5.3",
     "opn": "^5.1.0",

@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Hello from '@/components/Hello'
 import home from '@/components/home'
-import Testes from '@/components/testes'
+import Docs from '@/components/docs'
 
 Vue.use(Router)
 
@@ -19,12 +19,7 @@ export default new Router({
     }, {
       path: '/docs',
       name: 'Docs',
-      component: Hello
-    },
-    {
-      path: '/testes',
-      name: 'Testes',
-      component: Testes
+      component: Docs
     }
   ]
 })
