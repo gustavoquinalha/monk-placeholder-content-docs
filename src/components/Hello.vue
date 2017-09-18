@@ -8,8 +8,8 @@
     <label for="">Simple content</label>
     <placeholderContent type="simple" :title="true" :number="3" :button="true"></placeholderContent>
     <div class="container align-items-center">
-      <pre v-highlightjs><code class="javascript" id="simple">&lt;placeholderContent type=&quot;simple&quot; :title=&quot;true&quot; :number=&quot;3&quot; :button=&quot;true&quot;&gt;&lt;/placeholderContent&gt;
-</code></pre>
+      <div v-highlight style="width: 100%"><pre><code class="html">&lt;placeholderContent type=&quot;simple&quot; :title=&quot;true&quot; :number=&quot;3&quot; :button=&quot;true&quot;&gt;&lt;/placeholderContent&gt;</code></pre>
+      </div>
       <div class="copy-btn">
         <a class="btn btn-copy container align-items-center jusitfy-content-center" data-clipboard-target="#simple" style="height: 20px">copy</a>
       </div>
@@ -126,12 +126,11 @@ export default {
 
 
 <style scoped>
+code,
 pre {
-  background: #333;
-  color: #fff;
-  padding: 10px;
-  box-sizing: border-box;
+  width: 100%
 }
+
 .box {
   padding: 20px;
   box-sizing: border-box;
