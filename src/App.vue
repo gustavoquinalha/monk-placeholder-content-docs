@@ -31,6 +31,24 @@ export default {
   text-align: center;
   color: #2c3e50;
 }
+.hljs {
+  padding: 20px;
+  box-sizing: border-box;
+  background: #2a2d4d
+}
+.hljs-attr {
+  color: rgb(80, 250, 123)
+}
+.hljs-keyword,
+.hljs-name {
+  color: #ff79c6
+}
+.hljs-tag {
+  color: #fff
+}
+.hljs-string {
+  color: #fcff80
+}
 .fade-enter-active {
    transition: all .3s cubic-bezier(.37, .61, .58, .86);
  }

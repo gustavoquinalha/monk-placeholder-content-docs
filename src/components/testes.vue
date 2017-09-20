@@ -25,7 +25,6 @@
             </div>
           </div>
           <div class="image-ex" v-bind:style="{ 'background-image': 'url(' + x.img + ')' }">
-            <!-- <img :src="x.img" width="100%" alt=""> -->
           </div>
         </div>
       </div>
@@ -39,7 +38,10 @@
   </div>
 
 <div class="relative">
-  <div class="container align-items-start"><pre><code class="html" id="card2">&lt;template&gt;
+  <div class="container align-items-start">
+
+    <div v-highlight style="width: 100%">
+      <pre><code class="html" id="will">&lt;template&gt;
   &lt;div class=&quot;hello&quot;&gt;
     &lt;div class=&quot;&quot; v-show=&quot;isLoading&quot; v-cloak&gt;
       &lt;div class=&quot;container wrap&quot;&gt;
@@ -72,7 +74,7 @@
 &lt;/template&gt;
 
 &lt;script&gt;
-import placeholderContent from '../../node_modules/monk-placeholder-content/src/components/placeholder-content.vue'
+import placeholderContent from 'placeholder-content'
 
 export default {
   name: 'hello',
@@ -118,12 +120,10 @@ export default {
 &lt;/script&gt;
 
 &lt;style scoped&gt;
-&lt;/style&gt;
-
-
-  </code></pre>
+&lt;/style&gt;</code></pre>
+  </div>
     <div class="copy-btn">
-      <a class="btn btn-copy container align-items-center jusitfy-content-center" data-clipboard-target="#card2" style="height: 20px">copy</a>
+      <a class="btn btn-copy container align-items-center jusitfy-content-center" data-clipboard-target="#will" style="height: 20px">copy</a>
     </div>
   </div>
 </div>
