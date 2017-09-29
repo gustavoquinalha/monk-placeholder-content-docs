@@ -38,6 +38,7 @@ var webpackConfig = merge(baseWebpackConfig, {
       orientation: "portrait",
       display: "standalone",
       background_color: '#dddddd',
+      inject: true,
       fingerprints: false,
       icons: [{
         src: path.resolve('src/assets/logo.png'),
