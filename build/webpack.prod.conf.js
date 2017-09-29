@@ -42,7 +42,7 @@ var webpackConfig = merge(baseWebpackConfig, {
       fingerprints: false,
       icons: [{
         src: path.resolve('src/assets/logo.png'),
-        sizes: [96, 128, 192, 256, 384, 512, 1024]
+        sizes: [16, 32, 96, 128, 192, 256, 384, 512, 1024]
       }]
     }),
     // http://vuejs.github.io/vue-loader/en/workflow/production.html
