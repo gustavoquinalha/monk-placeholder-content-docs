@@ -1,13 +1,15 @@
-var path = require('path')
-var utils = require('./utils')
-var webpack = require('webpack')
-var config = require('../config')
-var merge = require('webpack-merge')
-var baseWebpackConfig = require('./webpack.base.conf')
-var CopyWebpackPlugin = require('copy-webpack-plugin')
-var HtmlWebpackPlugin = require('html-webpack-plugin')
-var ExtractTextPlugin = require('extract-text-webpack-plugin')
-var OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
+const path = require('path')
+const utils = require('./utils')
+const webpack = require('webpack')
+const config = require('../config')
+const merge = require('webpack-merge')
+const baseWebpackConfig = require('./webpack.base.conf')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
+const WebpackPwaManifest = require('webpack-pwa-manifest')
+
 
 var env = process.env.NODE_ENV === 'testing'
   ? require('../config/test.env')
@@ -27,6 +29,21 @@ var webpackConfig = merge(baseWebpackConfig, {
     chunkFilename: utils.assetsPath('js/[id].[chunkhash].js')
   },
   plugins: [
+    new WebpackPwaManifest({
+      filename: "manifest.json",
+      name: 'Monk Placeholder Content',
+      start_url: "./?utm_source=web_app_manifest",
+      short_name: 'Monk Placeholder Content',
+      description: 'Monk Placeholder Content',
+      orientation: "portrait",
+      display: "standalone",
+      background_color: '#dddddd',
+      fingerprints: false,
+      icons: [{
+        src: path.resolve('src/assets/logo.png'),
+        sizes: [96, 128, 192, 256, 384, 512, 1024]
+      }]
+    }),
     // http://vuejs.github.io/vue-loader/en/workflow/production.html
     new webpack.DefinePlugin({
       'process.env': env
