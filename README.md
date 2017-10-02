@@ -15,7 +15,7 @@ https://monk-placeholder-content.herokuapp.com/
 <template>
   <div>
     <div v-show="loading">
-    Loading
+      <placeholderContent type="card" :photo="true" :title="false" :description="true" :number="2" :button="false" :head="false" v-for="x in 5"></placeholderContent>
     </div>
     <div v-show="!loading">
       Loaded
@@ -27,7 +27,7 @@ https://monk-placeholder-content.herokuapp.com/
 export default {
     data () {
       return {
-        loadgin: 'true',
+        loading: 'true',
     },
     methods: {
        search: function (txt) {
