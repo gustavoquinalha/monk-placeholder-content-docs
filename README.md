@@ -2,7 +2,13 @@
 
 ![GIF](https://github.com/gustavoquinalha/monk-placeholder-content-docs/blob/master/src/assets/images/gif1.gif)
 
-[Docs](https://monk-placeholder-content.herokuapp.com/)
+[See docs](https://monk-placeholder-content.herokuapp.com/)
+
+## Get started
+
+```
+$ npm i monk-placeholder-content -D
+```
 
 - Criar a variavel de carregamento, nesse exemplo usaremos 'loading', defina como true
 - Na div principal adicione v-show="!loading"
