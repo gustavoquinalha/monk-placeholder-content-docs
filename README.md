@@ -23,9 +23,14 @@ https://monk-placeholder-content.herokuapp.com/
   </div>
 </template>
 ```
-
 ```javascript
- search: function (txt) {
+export default {
+    data () {
+      return {
+        loadgin: 'true',
+    },
+    methods: {
+       search: function (txt) {
         this.isLoading = true
         this.$http.get('/youtube/music', {
           params: {
@@ -45,4 +50,7 @@ https://monk-placeholder-content.herokuapp.com/
             console.log('Error' + JSON.stringify(error))
           })
       },
+    }
+  }
+}
 ```
